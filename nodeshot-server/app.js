@@ -55,6 +55,6 @@ require('./routes/index.js')(app, config, pendingJobs, cacheService);
 require('./routes/options.js')(app, config);
 
 // Start application
-app.listen(config.server.port);
+app.listen(config.server.port, config.server.bind);
 
-winston.info('Server running on port %d', config.server.port);
+winston.info('Server running on port %s:%d', config.server.bind, config.server.port);

@@ -15,6 +15,7 @@ screenshot:
 server:
   domain:"http://localhost"
   port: 8080
+  bind: "localhost"
   cors: true
   kue:
     show: true
